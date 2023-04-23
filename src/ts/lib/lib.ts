@@ -1,3 +1,5 @@
+//this is a typescript version of webkit spring solver (https://svn.webkit.org/repository/webkit/trunk/Source/WebCore/platform/graphics/SpringSolver.h)
+
 export class SpringSolver {
     private m_w0!:number;
     private m_zeta!:number;
@@ -23,7 +25,13 @@ export class SpringSolver {
             this.m_B = -this.initialVelocity + this.m_w0;
         }
     }
-    
+    /**
+     *
+     *
+     * @param {number} t // time passed
+     * @return {*} 
+     * @memberof SpringSolver
+     */
     solve(t:number)
     {
         if (this.m_zeta < 1) {
