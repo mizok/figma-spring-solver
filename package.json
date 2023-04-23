@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx cross-env TS_NODE_PROJECT=\"tsconfig-for-webpack-config.json\" webpack serve --config webpack.config.ts  --mode development",
-    "build": "npx cross-env TS_NODE_PROJECT=\"tsconfig-for-webpack-config.json\" webpack --config webpack.config.ts --mode production"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx cross-env TS_NODE_PROJECT=\"tsconfig-for-webpack-config.json\" webpack --config webpack.config.ts --mode production",
+    "dev": "npx cross-env TS_NODE_PROJECT=\"tsconfig-for-webpack-config.json\" webpack serve --config webpack.config.ts  --mode development",
+    "deploy": "npm run build && npx gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -21,9 +23,19 @@
     "@types/webpack-dev-server": "^4.7.2",
     "copy-webpack-plugin": "^9.0.1",
     "cross-env": "^7.0.3",
-    "html-webpack-plugin": "^5.3.1",
+    "css-loader": "^5.2.1",
+    "css-minimizer-webpack-plugin": "^4.0.0",
+    "ejs": "^3.1.6",
     "gh-pages": "^3.2.3",
     "html-loader": "^3.0.1",
+    "html-webpack-plugin": "^5.3.1",
+    "mini-css-extract-plugin": "^1.5.0",
+    "postcss-loader": "^5.2.0",
+    "postcss-preset-env": "^6.7.0",
+    "sass": "^1.33.0",
+    "sass-loader": "^12.0.0",
+    "style-loader": "^2.0.0",
+    "template-ejs-loader": "latest",
     "terser-webpack-plugin": "^5.3.1",
     "ts-loader": "^9.2.6",
     "ts-node": "^10.4.0",

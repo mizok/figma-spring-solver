@@ -29,7 +29,7 @@ function main(){
         const repeater =  ()=>{
             const dist  =spr.solve(performance.now() - beginTime)
             if(Math.abs(dist) > 0){
-                ele.style.transform = `translateY(${dist}px)`
+                ele.style.transform = `translateX(${dist}px)`
                 requestAnimationFrame(repeater);
             }
         }
