@@ -9,6 +9,6 @@ tags:
 
 https://www.figma.com/blog/how-we-built-spring-animations/
 
-因為 Figma 的 Smart Animate 使用了 Apple 提供的 Webkit Spring Resolver來實作ui 的 spring bouncing 動畫， 而Webkit Spring Resolver是使用 C++ 編寫, 這邊我將其解析為typescript的版本, 可以直接拿./src/ts/lib/lib.ts 裡面的 Spring Resolver 來使用。（使用的方法請見 ./src/ts/main.ts）
+因為 Figma 的 Smart Animate 使用了 Apple 提供的 Webkit Spring Resolver來實作ui 的 spring bouncing 動畫， 而Webkit Spring Resolver是使用 C++ 編寫, 這邊我將其解析為typescript的版本, 可以直接拿`./src/ts/lib/lib.ts` 裡面的 Spring Resolver 來使用。（使用的方法請見 `./src/ts/main.ts`）
 
 [DEMO網址](https://mizok.github.io/figma-spring-solver/)
