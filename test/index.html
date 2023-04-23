@@ -11,9 +11,49 @@
             height: 50px;
             background-color: red;
         }
+        .input-group{
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+           
+        }
+        .input-ele{
+            display: flex;
+            align-items: center;
+        }
+
+        span+input{
+            margin-left: 10px;
+        }
+
+        .input-ele + .input-ele{
+                margin-top: 10px;
+        }
     </style>
 </head>
 <body>
     <div class="apple" id="apple"></div>
+
+    <div class="input-group">
+        <div class="input-ele">
+            <span>彈簧負重質量</span>
+            <input type="number" id="input1" value="0.5">
+        </div>
+        <div class="input-ele">
+            <span>彈簧硬度</span>
+            <input type="number" id="input2" value="0.001">
+        </div>
+        <div class="input-ele">
+            <span>彈簧阻尼係數</span>
+            <input type="number" id="input3" value="0.004">
+        </div>
+        <div class="input-ele">
+            <span>彈簧震盪初速</span>
+            <input type="number" id="input4" value="10">
+        </div>
+    </div>
+    
+    <button id="go">GO!</button>
+    
 </body>
 </html>
