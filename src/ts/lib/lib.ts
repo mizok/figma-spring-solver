@@ -34,16 +34,17 @@ export class SpringSolver {
      */
     solve(t:number)
     {
+        let x = 0
         if (this.m_zeta < 1) {
             // Under-damped
-            t = Math.exp(-t * this.m_zeta * this.m_w0) * (this.m_A * Math.cos(this.m_wd * t) + this.m_B * Math.sin(this.m_wd * t));
+            x = Math.exp(-t * this.m_zeta * this.m_w0) * (this.m_A * Math.cos(this.m_wd * t) + this.m_B * Math.sin(this.m_wd * t));
         } else {
             // Critically damped (ignoring over-damped case for now).
-            t = (this.m_A + this.m_B * t) * Math.exp(-t * this.m_w0);
+            x = (this.m_A + this.m_B * t) * Math.exp(-t * this.m_w0);
         }
     
         // Map range from [1..0] to [0..1].
-        return 1 - t;
+        return 1 - x;
     }
     
 }
