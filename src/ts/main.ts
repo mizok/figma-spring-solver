@@ -42,9 +42,6 @@ function main(){
         animate(appleEle);
     })
 
-    
-
-    
 }
 
 main();
